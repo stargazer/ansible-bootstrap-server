@@ -22,11 +22,6 @@ Ansible role that does exactly what you need.
 
 ## Examples
 
-``inventory``
-
-        [all]
-        remote.server.com
-
 ``playbook.yml``
 
         ---
@@ -38,6 +33,6 @@ Ansible role that does exactly what you need.
 
 Invoke playbook
 
-        ansible-playbook -i inventory --ask-pass playbook.yml
+        ansible-playbook --ask-pass playbook.yml
 
-You will be prompted to give the password of the ``foo`` user. When the playbook is done, the user ``bar`` will be created on the server ``remote.server.com``.
+You will be prompted to give the password of the ``foo`` user. When the playbook is done, the user ``bar`` will be created on the remote server.
