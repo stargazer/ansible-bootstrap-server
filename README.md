@@ -7,8 +7,8 @@
 ### What you need?
 An extra user account with password-less SSH access, and password-less sudo permission.
 
-### What you get
-Exactly what you need.
+### What you get?
+Ansible role that does exactly what you need.
 
 ## Requirements
 
