@@ -1,0 +1,26 @@
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# Please consider adding local content in /etc/sudoers.d/ instead of
+# directly modifying this file.
+#
+# See the man page for details on how to write a sudoers file.
+#
+
+# Reset the terminal environment to remove any user variables
+Defaults    env_reset
+# Specify the PATH that will be used for sudo operations
+Defaults    secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# User privilege specification
+root ALL=(ALL:ALL) ALL
+
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+
+# All members of group sudo:
+# - Can execute the sudo command from ALL terminals
+# - Can act as ALL users
+# - Will not be prompted for a password
+# - Can run any command
+%sudo ALL=(ALL) NOPASSWD: ALL

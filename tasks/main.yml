@@ -1,0 +1,16 @@
+- name: Create user
+  user: name={{ user }}
+        groups=sudo
+        shell=/bin/bash
+
+- name: Upload SSH key(s) for passwordless ssh
+  authorized_key: user={{ user }}
+                  key={{ key }}
+                  state=present
+
+- name: Upload sudoers file
+  copy: src=sudoers
+        dest=/etc/sudoers
+        validate='visudo -cf %s'
+        mode=0440
+
