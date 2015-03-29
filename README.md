@@ -20,7 +20,7 @@ Ansible role that does exactly what you need.
 
 ``key``: URL to your public key(s). These keys will be uploaded to the new user account's ``.ssh/authorizer_keys`` and will be used in order to give you password-less sudo access to that account. Best thing you can do is use ``https://github.com/<username>.keys``, where ``username`` is your Github username. 
 
-# Examples
+## Examples
 
 ``inventory``
 
