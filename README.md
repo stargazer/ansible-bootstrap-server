@@ -1,18 +1,11 @@
 # ansible-bootstrap-server
 
-### What you have?
-* A Debian server running somewhere
-* A user account with ``sudo`` permissions
+This Ansible role creates a user account with password-less SSH access and password-less sudo permission.
 
-### What you need?
-An extra user account with password-less SSH access, and password-less sudo permission.
+### Requirements
 
-### What you get?
-Ansible role that does exactly what you need.
-
-## Requirements
-
-* Ansible >= 1.9
+* A Debian machine running an SSH server and a user account with ``sudo`` permission
+* Ansible >= 1.9 on your host
 
 ## Role variables
 
@@ -22,17 +15,17 @@ Ansible role that does exactly what you need.
 
 ## Examples
 
-``playbook.yml``
+    ``playbook.yml``
 
-        ---
-        hosts: all
-        remote_user: foo
-        sudo: yes
-        roles:
-         - {role: 'ansible-bootstrap-server', user: bar, key: "https://github.com/stargazer.keys"}
+    ---
+    hosts: all
+    remote_user: foo
+    sudo: yes
+    roles:
+     - {role: 'ansible-bootstrap-server', user: bar, key: "https://github.com/stargazer.keys"}
 
 Invoke playbook
-
-        ansible-playbook --ask-pass playbook.yml
+    
+    ansible-playbook --ask-pass playbook.yml
 
 You will be prompted to give the password of the ``foo`` user. When the playbook is done, the user ``bar`` will be created on the remote server.
