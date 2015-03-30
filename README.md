@@ -15,7 +15,7 @@ This Ansible role creates a user account with password-less SSH access and passw
 
 ## Examples
 
-    ``playbook.yml``
+    playbook.yml
 
     ---
     hosts: all
