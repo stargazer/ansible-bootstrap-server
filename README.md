@@ -1,4 +1,4 @@
-# ansible-bootstrap-server
+# ansible-server-bootstrap
 
 This Ansible role creates a user account with password-less SSH access and password-less sudo permission.
 
@@ -22,7 +22,7 @@ This Ansible role creates a user account with password-less SSH access and passw
     remote_user: foo
     sudo: yes
     roles:
-     - {role: 'ansible-bootstrap-server', user: bar, key: "https://github.com/stargazer.keys"}
+     - {role: 'ansible-server-bootstrap', user: bar, key: "https://github.com/stargazer.keys"}
 
 Invoke playbook
     
