@@ -3,9 +3,12 @@
   apt: update-cache=yes
        cache_valid_time=99360
 
-- name: Install sudo
-  apt: pkg=sudo 
+- name: Install dependencies
+  apt: pkg={{ item }}
        state=present
+  with_items:
+   - sudo
+   - python
 
 - name: Upload sudoers file
   copy: src=sudoers
